@@ -5,7 +5,7 @@ no se modifica el servicio ni las demás estrategias.
 LSP: toda estrategia devuelve un Decimal >= 0 y <= subtotal.
 """
 from abc import ABC, abstractmethod
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 
 
 class PoliticaDescuento(ABC):
@@ -26,7 +26,7 @@ class DescuentoPorcentual(PoliticaDescuento):
         self._porcentaje = porcentaje
 
     def calcular(self, subtotal: Decimal) -> Decimal:
-        return subtotal * self._porcentaje
+        return (subtotal * self._porcentaje).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
 
 # Registro de políticas por categoría de cliente (configuración, no lógica)
