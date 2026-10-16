@@ -1,4 +1,4 @@
-# SoftMarket – Repositorio simulado de la propuesta de buenas prácticas
+# SoftMarket – Repositorio simulado (v1.0.0) de la propuesta de buenas prácticas
 
 Repositorio de ejemplo que acompaña el informe técnico *"Refactorizando el Caos en SoftMarket"*.
 Muestra el modelo de ramas, las convenciones de commits y la refactorización SOLID del módulo de **facturación**.
